@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseBoard Dashboard</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard">
+        <div class="container-fluid">
+            <div class="row g-0">
+                <aside class="col-lg-2 sidebar">
+                    <div class="sidebar-logo">
+                        <h2>
+                            <span class="logo-dot"></span>
+                            PulseBoard
+                        </h2>
+                    </div>
+                    <nav class="sidebar-nav">
+                        <ul>
+                            <li>
+                                <a href="#" class="active">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                    Overview
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-network-wired"></i>
+                                    Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-bell"></i>
+                                    Alerts
+                                    <span class="alert-count">
+                                        3
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-scroll"></i>
+                                    Logs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-gear"></i>
+                                    Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+                <section class="col-lg-10 main-content">
+                    <header class="dashboard-header d-flex justify-content-between align-items-start flex-wrap">
+                        <div>
+                            <h1>
+                                Infrastructure Overview
+                            </h1>
+                            <p>
+                                Region <strong> Ap-North-2</strong> . 12 hosts . auto-refresh paused
+                            </p>
+                        </div>
+                        <div class="header-right text-end">
+                            <p>
+                                Last updated just now
+                            </p>
+                            <button class="btn btn-primary">
+                                Refresh
+                            </button>
+                        </div>
+                    </header>
+                    <section class="stats-section">
+                        <div class="row g-4">
+                            <div class="col-xl-3 col-md-6">
+    <div class="stats-card">
+        <h6>CPU LOAD</h6>
+        <h2>72%</h2>
+        <div class="progress">
+            <div class="progress-bar cpu-bar" style="width:72%;"></div>
+        </div>
+        <p>avg across 12 cores</p>
+    </div>
+</div>
+<div class="col-xl-3 col-md-6">
+    <div class="stats-card">
+        <h6>MEMORY</h6>
+        <h2>58%</h2>
+        <div class="progress">
+            <div class="progress-bar memory-bar" style="width:58%;"></div>
+        </div>
+        <p>37.1 / 64 GB used</p>
+    </div>
+</div>
+<div class="col-xl-3 col-md-6">
+    <div class="stats-card">
+        <h6>DISK I/O</h6>
+        <h2>88%</h2>
+        <div class="progress">
+            <div class="progress-bar disk-bar" style="width:88%;"></div>
+        </div>
+        <p>nearing capacity</p>
+    </div>
+</div>
+<div class="col-xl-3 col-md-6">
+    <div class="stats-card">
+        <h6>NETWORK</h6>
+        <h2>34%</h2>
+        <div class="progress">
+            <div class="progress-bar network-bar" style="width:34%;"></div>
+        </div>
+        <p>412 Mbps inbound</p>
+    </div>
+</div>
+</div>
+</section>
+<section class="dashboard-content mt-4">
+    <div class="row g-4">
+        <div class="col-lg-7">
+    <div class="dashboard-card">
+        <div class="card-heading d-flex justify-content-between align-items-center">
+            <h3>Services</h3>
+            <span>6 monitored</span>
+        </div>
+        <div class="service-list">
+            <div class="service-item d-flex justify-content-between align-items-center">
+                <div class="service-name">
+                    <span class="status-dot operational"></span>
+                    <strong>api-gateway</strong>
+                    <small>web-01</small>
+                </div>
+                <div class="service-info">
+                    <span class="latency">42 ms</span>
+                    <span class="status-badge operational">Operational</span>
+                </div>
+            </div>
+            <div class="service-item d-flex justify-content-between align-items-center">
+                <div class="service-name">
+                    <span class="status-dot operational"></span>
+                    <strong>auth-service</strong>
+                    <small>web-02</small>
+                </div>
+                <div class="service-info">
+                    <span class="latency">61 ms</span>
+                    <span class="status-badge operational">Operational</span>
+                </div>
+            </div>
+            <div class="service-item d-flex justify-content-between align-items-center">
+                <div class="service-name">
+                    <span class="status-dot warning"></span>
+                    <strong>payments</strong>
+                    <small>pay-01</small>
+                </div>
+                <div class="service-info">
+                    <span class="latency">310 ms</span>
+                    <span class="status-badge degraded">Degraded</span>
+                </div>
+            </div>
+            <div class="service-item d-flex justify-content-between align-items-center">
+                <div class="service-name">
+                    <span class="status-dot danger"></span>
+                    <strong>db-primary</strong>
+                    <small>db-01</small>
+                </div>
+                <div class="service-info">
+                    <span class="latency">timeout</span>
+                    <span class="status-badge down">Down</span>
+                </div>
+            </div>
+            <div class="service-item d-flex justify-content-between align-items-center">
+                <div class="service-name">
+                    <span class="status-dot operational"></span>
+                    <strong>search</strong>
+                    <small>srch-01</small>
+                </div>
+                <div class="service-info">
+                    <span class="latency">88 ms</span>
+                    <span class="status-badge operational">Operational</span>
+                </div>
+            </div>
+            <div class="service-item d-flex justify-content-between align-items-center">
+                <div class="service-name">
+                    <span class="status-dot operational"></span>
+                    <strong>cdn-edge</strong>
+                    <small>edge-09</small>
+                </div>
+                <div class="service-info">
+                    <span class="latency">19 ms</span>
+                    <span class="status-badge operational">Operational</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-5">
+    <div class="dashboard-card">
+        <div class="card-heading">
+            <h3>Recent Alerts</h3>
+        </div>
+        <div class="alert-list">
+            <div class="alert-item">
+                <span class="alert-badge critical">CRIT</span>
+                <strong>Disk I/O above 85% on db-primary</strong>
+                <p>2 min ago</p>
+            </div>
+            <div class="alert-item">
+                <span class="alert-badge warning">WARN</span>
+                <strong>CPU spike on web-03</strong>
+                <p>14 min ago</p>
+            </div>
+            <div class="alert-item">
+                <span class="alert-badge info">INFO</span>
+                <strong>Auto-scaling added 1 node</strong>
+                <p>38 min ago</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<footer class="dashboard-footer text-center">
+    <p>
+        PulseBoard • demo data • built with Bootstrap 5.3
+    </p>
+</footer>
+</section>
+</div>
+</div>
+</main>
+</body>
+</html>
